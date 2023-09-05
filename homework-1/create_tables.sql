@@ -1,7 +1,7 @@
 -- SQL-команды для создания таблиц
 CREATE TABLE customers
 (
-	customer_id varchar,
+	customer_id varchar ,
 	company_name varchar,
 	contact_name varchar
 
@@ -9,7 +9,7 @@ CREATE TABLE customers
 
 CREATE TABLE employees
 (
-	employee_id varchar,
+	employee_id varchar ,
 	first_name varchar,
 	last_name varchar,
 	title varchar,
@@ -21,7 +21,7 @@ CREATE TABLE employees
 CREATE TABLE orders
 (
 	order_id int NOT NULL,
-	customer_id varchar (10),
+	customer_id char (5),
 	employee_id int2,
 	order_date date,
 	ship_city varchar
