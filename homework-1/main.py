@@ -26,11 +26,11 @@ with open(file='../homework-1/north_data/employees_data.csv', encoding='utf-8') 
     connect.commit()
     curs.close()
 
-with open(file='../homework-1/north_data/orders_data.csv.csv', encoding='utf-8') as f:
+with open(file='../homework-1/north_data/orders_data.csv', encoding='utf-8') as f:
     file_reader = DictReader(f)
     curs = connect.cursor()
     for info in file_reader:
-        curs.execute('INSERT INTO orders VALUES (%s,%s,%s)', (info["order_id"], info["customer_id"], info["employee_id"], info['order_date'], info['ship_city']))
+        curs.execute('INSERT INTO orders VALUES (%s,%s,%s,%s,%s)', (info["order_id"], info["customer_id"], info["employee_id"], info['order_date'], info['ship_city']))
     connect.commit()
     curs.close()
 
